@@ -1,82 +1,90 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Law&Tech</title>
   <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-
   <script src="script.js"></script>
-
+  <!-- Removi a classe "um" pois não fazia diferença no código -->
+  <!-- Removi as tags <br> pois dá pra configurar espaço no CSS -->
   <header>
-
+    <h1><a href="index.html" class="link">Law&Tech</a></h1>
     <nav>
       <ul>
         <li><a href="login.html">Login</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
         <li><a href="#">Suporte</a></li>
         <li><a href="#">Contato</a></li>
-
-        <hr>
+      </ul>
     </nav>
-
-    <div class="um">
-      <p><br>
-        <hr>
-      </p>
+    <hr>
+    <div>
+      <!-- Coloquei o nome do sistema como "JusUpdate" -->
+      <!-- Pode substituir o nome por qualquer outro -->
       <h1>
-        Acompanhe todos os processos em uma só uma plataforma
+        JusUpdate
       </h1>
-      <p>Te ajudamos a não perder nenhum prazo.</p>
-      <button>Saiba mais</button>
+      <h2>Acompanhe todos os processos em uma só uma plataforma.</h2>
+      <p>Nós te ajudamos a não perder nenhum prazo.</p>
+      <button class="button">Saiba mais</button>
     </div>
   </header>
-
-  <section class="dois">
+  <!-- Substitui o nome da classe para "sobre" -->
+  <section class="sobre">
     <h2>Sobre a Law&Tech</h2>
-    <p>Startup criada por alunos de graduação da Faculdade Senac 
-       Pernambuco. Damos suporte a escritórios de advocacia ou           advogados autonomos.
+    <p>
+      Startup criada por alunos de graduação da Faculdade Senac Pernambuco. 
+      Damos suporte a escritórios de advocacia ou advogados autônomos.
     </p>
-    <a href="#">Saiba mais</a>
+    <a href="#" class="button">Saiba mais</a>
   </section>
-
-  
-  <section class="treis">
-    <h2>Conheça nossas soluções</h2>
+  <!-- Substitui o nome da classe para "solucoes" -->
+  <section class="solucoes">
+    <h2>Sobre o JusUpdate</h2>
     <ul>
-      <li><h3>Prazos</h3> 
-        Soluções de gestão de prazos com notificações 
-        por email e whatsap para profissionais do setor juridico.<br>
-        <button>Saiba mais -></button>
+      <li>
+        <h3>Prazos</h3> 
+        Gerenciamento de prazos com notificações 
+        por email e WhatsApp para profissionais do setor jurídico.<br>
+        <button class="button">Saiba mais</button>
       </li>
-      <li><h3>Visualização</h3>
-        Solução de gerenciamento de documentos
-        recebe as atualizações do processo.<br>
-        <button>Saiba mais -></button>
+      <li>
+        <h3>Visualização</h3>
+        Gerenciamento de processos judiciais eletrônicos, 
+        com atualizações sobre as últimas movimentações.<br>
+        <button class="button">Saiba mais</button>
       </li>
-      
     </ul>
   </section>
-
+  <!-- Coloquei 03 depoimentos fictícios -->
   <section>
     <h2>Depoimentos</h2>
     <ul>
-      <li>Depoimento de um cliente satisfeito</li>
-      <li>Depoimento de outro cliente satisfeito</li>
-      <li>Depoimento de um parceiro de negócios</li>
+      <li>
+        <i>
+          Eu uso o JusUpdate para calcular os prazos dos meus processos e receber as notificações por e-mail. Assim, eu não perco nenhum prazo e consigo planejar melhor as minhas atividades. O JusUpdate é muito fácil de usar e me ajuda a economizar tempo e dinheiro.
+        </i>
+        <p>João, advogado trabalhista</p>
+      </li>
+      <li>
+        <i>
+          Eu uso o JusUpdate para fazer o controle dos meus processos e prazos. O JusUpdate me informa sobre todas as movimentações dos meus processos. O JusUpdate é um software jurídico completo e moderno que me dá mais agilidade e segurança na minha rotina.
+        </i>
+        <p>Maria, advogada cível</p>
+      </li>
+      <li>
+        <i>
+          Eu uso o JusUpdate para fazer a gestão dos meus processos e prazos. O JusUpdate me permite visualizar as atualizações processuais e me alerta sobre os prazos que eu tenho que cumprir. O JusUpdate é um software jurídico que me dá mais qualidade e produtividade na minha advocacia.
+        </i>
+        <p>Pedro, advogado criminalista</p>
+      </li>
     </ul>
   </section>
-
   <footer>
-    <h3>Entre em contato conosco</h3>
-    
+    <h3>Entre em contato conosco</h3>    
   </footer>
-
-  
 </body>
-
 </html>
