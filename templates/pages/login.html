@@ -43,7 +43,7 @@
 <script>
     async function login() {
         event.preventDefault();
-        const urlUsuarioLogin = "/";
+        let email;
         fetch("http://localhost:3000/users", {method: "GET"})
         .then(resposta => resposta.json())
         .then(usuarios => {
@@ -51,9 +51,15 @@
             const userPassword = document.querySelector("#password").value;
             usuarios.map(usuario => {
                 if ((usuario.email === userEmail) && (usuario.password === userPassword)){
-                    window.location.href = urlUsuarioLogin;
+                        email = userEmail
                 }
             })
+        })
+        .then(() => {
+            if (email !== undefined) {
+                fetch('/create-folder', {method: 'POST', body: email});
+                window.history = '/';
+            }
         })
     }
 </script>

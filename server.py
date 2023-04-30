@@ -1,4 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, request, url_for
+import os 
+from pathlib import Path
+import random
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -21,10 +25,26 @@ def sobre():
 def suporte():
   return render_template('pages/suporte.html')
 
-@app.route('/alguma-funcao/')
-def my_link():
-  # executar alguma função
-  return 'teste'
+@app.route('/create-folder', methods=['POST'])
+def create_folder():
+    data = request.data.decode('UTF-8')
+    allDataStored = 'datastore'
+    absolutePath = Path().absolute()
+    path = f'{absolutePath}/{allDataStored}/{data}'
+    try: 
+      os.mkdir(path)
+    except OSError as error: 
+      print(error)
+    try:
+      port = random.randrange(65535)
+      os.system(f'python3 changedetection.py -d {path} -p {port}')
+      print(port)
+    except OSError as error:
+      print(error)
+      port = random.randrange(65535)
+      os.system(f'python3 changedetection.py -d {path} -p {port}')
+      print(port)
+    return redirect(f'http://localhost:{port}')
 
 if __name__ == '__main__':
   app.run(debug=True)
