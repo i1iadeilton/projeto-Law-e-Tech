@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Law&Tech</title>
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <!-- Removi a classe "um" pois não fazia diferença no código -->
   <!-- Removi as tags <br> pois dá pra configurar espaço no CSS -->
   <header>
-    <h1><a href="index.html" class="link">Law&Tech</a></h1>
+    <h1><a href="/" class="link">Law&Tech</a></h1>
     <nav>
       <ul>
         <li><a href="./pages/login.html">Login</a></li>
